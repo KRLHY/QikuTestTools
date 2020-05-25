@@ -5,4 +5,4 @@ QikuTestTools based on "Visual Basic .NET", coded by "Visual Studio", packed by 
 
 QikuTestTools needs ".NET Framework 4.7.2" to stable run.
 
-The interview is in "https://bbs.360.cn/thread-15798096-1-1.html".
+The interview of the application is in "https://bbs.360.cn/thread-15798096-1-1.html".
