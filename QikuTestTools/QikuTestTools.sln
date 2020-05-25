@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29728.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "QikuTestTools", "QikuTestTools.vbproj", "{1984B6E7-D613-4E30-8F6A-347CB698F48F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "QikuTestTools打包", "..\QikuTestTools打包\QikuTestTools打包.vdproj", "{3A7AEC63-0C20-4660-9B4A-800B301BEDA2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1984B6E7-D613-4E30-8F6A-347CB698F48F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1984B6E7-D613-4E30-8F6A-347CB698F48F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1984B6E7-D613-4E30-8F6A-347CB698F48F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1984B6E7-D613-4E30-8F6A-347CB698F48F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A7AEC63-0C20-4660-9B4A-800B301BEDA2}.Debug|Any CPU.ActiveCfg = Debug
+		{3A7AEC63-0C20-4660-9B4A-800B301BEDA2}.Release|Any CPU.ActiveCfg = Release
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B9EA0A6F-3FD8-4421-89E0-49B9C92580FB}
+	EndGlobalSection
+EndGlobal
