@@ -1,5 +1,5 @@
 # QikuTestTools
-QikuTestTools last version "V1.5.6.0" open resourse files.
+QikuTestTools beta version open resourse files.
 
 QikuTestTools based on "Visual Basic .NET", coded by "Visual Studio", packed by "Microsoft Visual Studio Installer Projects".
 

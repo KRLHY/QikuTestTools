@@ -32,6 +32,7 @@ Partial Class frmAbout
         Me.Label4 = New System.Windows.Forms.Label()
         Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label6 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
@@ -75,7 +76,7 @@ Partial Class frmAbout
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(625, 32)
         Me.Label3.TabIndex = 3
-        Me.Label3.Text = "Copyright © 2019 - 2020 All Rights Reserved."
+        Me.Label3.Text = "Copyright © 2019 - 2021 All Rights Reserved."
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'GroupBox1
@@ -131,11 +132,25 @@ Partial Class frmAbout
         Me.Button1.Text = "检查更新"
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label6
+        '
+        Me.Label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label6.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label6.Font = New System.Drawing.Font("微软雅黑", 14.0!, CType((System.Drawing.FontStyle.Italic Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.Red
+        Me.Label6.Location = New System.Drawing.Point(12, 425)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(625, 32)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "使用非360手机或希望使用更好用的工具箱？"
+        Me.Label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
         'frmAbout
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(685, 436)
+        Me.ClientSize = New System.Drawing.Size(689, 474)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Label3)
@@ -144,7 +159,9 @@ Partial Class frmAbout
         Me.Controls.Add(Me.PictureBox1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
+        Me.MaximumSize = New System.Drawing.Size(707, 521)
         Me.MinimizeBox = False
+        Me.MinimumSize = New System.Drawing.Size(707, 521)
         Me.Name = "frmAbout"
         Me.Text = "关于 QikuTestTools & Version"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -163,4 +180,5 @@ Partial Class frmAbout
     Friend WithEvents Label4 As Label
     Friend WithEvents ComboBox1 As ComboBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label6 As Label
 End Class

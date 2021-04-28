@@ -32,15 +32,16 @@ Partial Class frmSplash
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.Font = New System.Drawing.Font("微软雅黑", 15.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Label1.Location = New System.Drawing.Point(96, 25)
+        Me.Label1.Location = New System.Drawing.Point(37, 25)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(625, 32)
+        Me.Label1.Size = New System.Drawing.Size(726, 32)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "QikuTestTools正在等待初始化中......"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -52,7 +53,7 @@ Partial Class frmSplash
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(625, 32)
         Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Copyright © 2019 - 2020 All Rights Reserved."
+        Me.Label2.Text = "Copyright © 2019 - 2021 All Rights Reserved."
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
@@ -113,11 +114,26 @@ Partial Class frmSplash
         Me.Label4.Text = "Version"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'Label5
+        '
+        Me.Label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label5.Font = New System.Drawing.Font("微软雅黑", 14.0!, CType((System.Drawing.FontStyle.Italic Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label5.ForeColor = System.Drawing.Color.Red
+        Me.Label5.Location = New System.Drawing.Point(95, 302)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(625, 32)
+        Me.Label5.TabIndex = 8
+        Me.Label5.Text = "使用非360手机或希望使用更好用的工具箱？"
+        Me.Label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Label5.Visible = False
+        '
         'frmSplash
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -127,6 +143,8 @@ Partial Class frmSplash
         Me.Controls.Add(Me.Label1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.MaximumSize = New System.Drawing.Size(800, 450)
+        Me.MinimumSize = New System.Drawing.Size(800, 450)
         Me.Name = "frmSplash"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "QikuTestTools & Version"
@@ -144,4 +162,5 @@ Partial Class frmSplash
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Label4 As Label
+    Friend WithEvents Label5 As Label
 End Class

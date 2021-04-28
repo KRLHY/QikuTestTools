@@ -26,6 +26,7 @@ Partial Class Form1
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.Usehelp = New System.Windows.Forms.ToolStripMenuItem()
         Me.Duty = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Opensource = New System.Windows.Forms.ToolStripMenuItem()
         Me.Help = New System.Windows.Forms.ToolStripMenuItem()
         Me.Checkupdate = New System.Windows.Forms.ToolStripMenuItem()
         Me.About = New System.Windows.Forms.ToolStripMenuItem()
@@ -42,7 +43,7 @@ Partial Class Form1
         Me.Button10 = New System.Windows.Forms.Button()
         Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
-        Me.Opensource = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Label2 = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -50,43 +51,51 @@ Partial Class Form1
         '
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.Window
         Me.MenuStrip1.Font = New System.Drawing.Font("微软雅黑", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.MenuStrip1.GripMargin = New System.Windows.Forms.Padding(2, 2, 0, 2)
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Usehelp, Me.Duty, Me.Opensource, Me.Help})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(808, 28)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(7, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(904, 32)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
         'Usehelp
         '
         Me.Usehelp.Name = "Usehelp"
-        Me.Usehelp.Size = New System.Drawing.Size(83, 24)
+        Me.Usehelp.Size = New System.Drawing.Size(98, 28)
         Me.Usehelp.Text = "使用说明"
         '
         'Duty
         '
         Me.Duty.Name = "Duty"
-        Me.Duty.Size = New System.Drawing.Size(83, 24)
+        Me.Duty.Size = New System.Drawing.Size(98, 28)
         Me.Duty.Text = "免责声明"
+        '
+        'Opensource
+        '
+        Me.Opensource.Name = "Opensource"
+        Me.Opensource.Size = New System.Drawing.Size(98, 28)
+        Me.Opensource.Text = "开源地址"
         '
         'Help
         '
         Me.Help.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.Checkupdate, Me.About})
         Me.Help.Name = "Help"
-        Me.Help.Size = New System.Drawing.Size(53, 24)
+        Me.Help.Size = New System.Drawing.Size(62, 28)
         Me.Help.Text = "帮助"
         '
         'Checkupdate
         '
         Me.Checkupdate.Name = "Checkupdate"
-        Me.Checkupdate.Size = New System.Drawing.Size(152, 26)
+        Me.Checkupdate.Size = New System.Drawing.Size(182, 34)
         Me.Checkupdate.Text = "检查更新"
         '
         'About
         '
         Me.About.Name = "About"
-        Me.About.Size = New System.Drawing.Size(152, 26)
+        Me.About.Size = New System.Drawing.Size(182, 34)
         Me.About.Text = "关于"
         '
         'Label1
@@ -94,9 +103,9 @@ Partial Class Form1
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("微软雅黑", 15.0!)
         Me.Label1.ForeColor = System.Drawing.Color.Red
-        Me.Label1.Location = New System.Drawing.Point(197, 37)
+        Me.Label1.Location = New System.Drawing.Point(222, 44)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(415, 32)
+        Me.Label1.Size = New System.Drawing.Size(497, 39)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "点击下方的功能按键来执行相关操作"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -104,9 +113,10 @@ Partial Class Form1
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button1.Location = New System.Drawing.Point(17, 81)
+        Me.Button1.Location = New System.Drawing.Point(19, 97)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(236, 67)
+        Me.Button1.Size = New System.Drawing.Size(266, 80)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "关闭推送通道（实验）"
         Me.Button1.UseVisualStyleBackColor = True
@@ -114,9 +124,10 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button2.Location = New System.Drawing.Point(17, 173)
+        Me.Button2.Location = New System.Drawing.Point(19, 208)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(236, 67)
+        Me.Button2.Size = New System.Drawing.Size(266, 80)
         Me.Button2.TabIndex = 3
         Me.Button2.Text = "卸载PatchSystem"
         Me.Button2.UseVisualStyleBackColor = True
@@ -124,9 +135,10 @@ Partial Class Form1
         'Button3
         '
         Me.Button3.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button3.Location = New System.Drawing.Point(17, 263)
+        Me.Button3.Location = New System.Drawing.Point(19, 316)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(236, 67)
+        Me.Button3.Size = New System.Drawing.Size(266, 80)
         Me.Button3.TabIndex = 4
         Me.Button3.Text = "禁止系统更新"
         Me.Button3.UseVisualStyleBackColor = True
@@ -134,9 +146,10 @@ Partial Class Form1
         'Button4
         '
         Me.Button4.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button4.Location = New System.Drawing.Point(17, 352)
+        Me.Button4.Location = New System.Drawing.Point(19, 422)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(236, 67)
+        Me.Button4.Size = New System.Drawing.Size(266, 80)
         Me.Button4.TabIndex = 5
         Me.Button4.Text = "安装线刷工具"
         Me.Button4.UseVisualStyleBackColor = True
@@ -144,9 +157,10 @@ Partial Class Form1
         'Button5
         '
         Me.Button5.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button5.Location = New System.Drawing.Point(283, 81)
+        Me.Button5.Location = New System.Drawing.Point(318, 97)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(236, 67)
+        Me.Button5.Size = New System.Drawing.Size(266, 80)
         Me.Button5.TabIndex = 6
         Me.Button5.Text = "修复线刷驱动（实验）"
         Me.Button5.UseVisualStyleBackColor = True
@@ -154,9 +168,10 @@ Partial Class Form1
         'Button6
         '
         Me.Button6.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button6.Location = New System.Drawing.Point(283, 173)
+        Me.Button6.Location = New System.Drawing.Point(318, 208)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(236, 67)
+        Me.Button6.Size = New System.Drawing.Size(266, 80)
         Me.Button6.TabIndex = 7
         Me.Button6.Text = "保修查询（仅供参考）"
         Me.Button6.UseVisualStyleBackColor = True
@@ -164,9 +179,10 @@ Partial Class Form1
         'Button7
         '
         Me.Button7.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button7.Location = New System.Drawing.Point(283, 263)
+        Me.Button7.Location = New System.Drawing.Point(318, 316)
+        Me.Button7.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(236, 67)
+        Me.Button7.Size = New System.Drawing.Size(266, 80)
         Me.Button7.TabIndex = 8
         Me.Button7.Text = "破解无忧天气广告"
         Me.Button7.UseVisualStyleBackColor = True
@@ -174,9 +190,10 @@ Partial Class Form1
         'Button8
         '
         Me.Button8.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button8.Location = New System.Drawing.Point(283, 352)
+        Me.Button8.Location = New System.Drawing.Point(318, 422)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(236, 67)
+        Me.Button8.Size = New System.Drawing.Size(266, 80)
         Me.Button8.TabIndex = 9
         Me.Button8.Text = "破解主题商店"
         Me.Button8.UseVisualStyleBackColor = True
@@ -184,9 +201,10 @@ Partial Class Form1
         'Button9
         '
         Me.Button9.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button9.Location = New System.Drawing.Point(550, 81)
+        Me.Button9.Location = New System.Drawing.Point(619, 97)
+        Me.Button9.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(236, 67)
+        Me.Button9.Size = New System.Drawing.Size(266, 80)
         Me.Button9.TabIndex = 10
         Me.Button9.Text = "修改分辨率（DPI）"
         Me.Button9.UseVisualStyleBackColor = True
@@ -194,9 +212,10 @@ Partial Class Form1
         'Button10
         '
         Me.Button10.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button10.Location = New System.Drawing.Point(549, 173)
+        Me.Button10.Location = New System.Drawing.Point(618, 208)
+        Me.Button10.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(236, 67)
+        Me.Button10.Size = New System.Drawing.Size(266, 80)
         Me.Button10.TabIndex = 12
         Me.Button10.Text = "更新3D球（智能组件）"
         Me.Button10.UseVisualStyleBackColor = True
@@ -204,9 +223,10 @@ Partial Class Form1
         'Button11
         '
         Me.Button11.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button11.Location = New System.Drawing.Point(549, 263)
+        Me.Button11.Location = New System.Drawing.Point(618, 316)
+        Me.Button11.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(236, 67)
+        Me.Button11.Size = New System.Drawing.Size(266, 80)
         Me.Button11.TabIndex = 13
         Me.Button11.Text = "安装万能扫一扫"
         Me.Button11.UseVisualStyleBackColor = True
@@ -214,24 +234,33 @@ Partial Class Form1
         'Button12
         '
         Me.Button12.Font = New System.Drawing.Font("微软雅黑", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(134, Byte))
-        Me.Button12.Location = New System.Drawing.Point(549, 352)
+        Me.Button12.Location = New System.Drawing.Point(618, 422)
+        Me.Button12.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(236, 67)
+        Me.Button12.Size = New System.Drawing.Size(266, 80)
         Me.Button12.TabIndex = 14
         Me.Button12.Text = "安装魔球"
         Me.Button12.UseVisualStyleBackColor = True
         '
-        'Opensource
+        'Label2
         '
-        Me.Opensource.Name = "Opensource"
-        Me.Opensource.Size = New System.Drawing.Size(83, 24)
-        Me.Opensource.Text = "开源地址"
+        Me.Label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label2.Font = New System.Drawing.Font("微软雅黑", 14.0!, CType((System.Drawing.FontStyle.Italic Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(134, Byte))
+        Me.Label2.ForeColor = System.Drawing.Color.Red
+        Me.Label2.Location = New System.Drawing.Point(102, 509)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(703, 38)
+        Me.Label2.TabIndex = 15
+        Me.Label2.Text = "使用非360手机或希望使用更好用的工具箱？"
+        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 15.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(808, 450)
+        Me.ClientSize = New System.Drawing.Size(904, 555)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Button10)
@@ -248,9 +277,10 @@ Partial Class Form1
         Me.Controls.Add(Me.MenuStrip1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
+        Me.Margin = New System.Windows.Forms.Padding(3, 4, 3, 4)
         Me.MaximizeBox = False
-        Me.MaximumSize = New System.Drawing.Size(826, 497)
-        Me.MinimumSize = New System.Drawing.Size(826, 497)
+        Me.MaximumSize = New System.Drawing.Size(926, 611)
+        Me.MinimumSize = New System.Drawing.Size(926, 611)
         Me.Name = "Form1"
         Me.Text = "QikuTestTools & Version"
         Me.MenuStrip1.ResumeLayout(False)
@@ -280,4 +310,5 @@ Partial Class Form1
     Friend WithEvents Button11 As Button
     Friend WithEvents Button12 As Button
     Friend WithEvents Opensource As ToolStripMenuItem
+    Friend WithEvents Label2 As Label
 End Class

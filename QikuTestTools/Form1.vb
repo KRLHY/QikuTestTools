@@ -14,40 +14,31 @@
         Dim u As Boolean
         u = True
         Try
-            My.Computer.Network.DownloadFile("http://39.105.165.68/11.txt", frmSplash.s & "/tmp/update.txt")
+            Application.DoEvents()
+            My.Computer.Network.DownloadFile("https://krlhy.github.io/QikuTestTools/11.txt", frmSplash.s & "/tmp/update.txt")
         Catch
             u = False
         End Try
-        Dim a, b, c As String
+        Dim file = New System.IO.StreamReader(frmSplash.s & "/tmp/update.txt")
+        Dim a, b As String
         a = ""
         b = ""
-        c = ""
         If u Then
-            Dim file = New System.IO.StreamReader(frmSplash.s & "/tmp/update.txt")
             a = file.ReadLine()
             b = file.ReadLine()
-            If Not file.EndOfStream Then
-                c = file.ReadLine()
-            End If
             file.Close()
-            If Mid(a, 1, 1) = "V" And Mid(a, 3, 1) = "." And Mid(a, 5, 1) = "." Then
-                If a > "V" & Application.ProductVersion Then
-                    MessageBox.Show("检测到应用有新版本" & Chr（34） & a & Chr(34) & ",当前版本为" & Chr(34) & "V" & Application.ProductVersion & Chr(34) & "。请前往链接处更新已获得更优质的使用体验。" & Chr(10) & Chr(10) & "最近一次的更新日志为：" & Chr(34) & b & Chr(34), "QikuTestTools发现新版本", MessageBoxButtons.OK, MessageBoxIcon.Information)
-                    System.Diagnostics.Process.Start("https://yunpan.360.cn/surl_yutDxRfVpKc")
-                ElseIf a < "V" & Application.ProductVersion Then
-                    MessageBox.Show("请注意：当前应用版本为" & Chr(34) & "V" & Application.ProductVersion & "测试版" & Chr(34) & "，正式版最新为" & Chr(34) & a & Chr(34) & "。仅供内部测试使用，请勿外传！", "QikuTestTools测试版提醒", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                ElseIf a = "V" & Application.ProductVersion Then
-                    MessageBox.Show("当前版本" & Chr(34) & a & Chr(34) & "已经是最新版本。" & Chr(10) & Chr(10) & "当前版本的更新日志为：" & Chr(34) & b & Chr(34), "QikuTestTools更新服务", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                End If
-            Else
-                MessageBox.Show("当前没有最新版本信息，只有公告信息，如需要更新应用请前往360社区帖子处自行进入下载地址查看。", "QikuTestTools公告", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-                MsgBox(a, b, c)
+            If a > "V" & Application.ProductVersion Then
+                MessageBox.Show("检测到应用有新版本" & Chr（34） & a & Chr(34) & ",当前版本为" & Chr(34) & "V" & Application.ProductVersion & Chr(34) & "。请前往链接处更新以获得更优质的使用体验。" & Chr(10) & Chr(10) & "最近一次的更新日志为：" & Chr(34) & b & Chr(34), "QikuTestTools发现新版本", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                System.Diagnostics.Process.Start("https://yunpan.360.cn/surl_yutDxRfVpKc")
+            ElseIf a < "V" & Application.ProductVersion Then
+                MessageBox.Show("请注意：当前应用版本为" & Chr(34) & "V" & Application.ProductVersion & "测试版" & Chr(34) & "，正式版最新为" & Chr(34) & a & Chr(34) & "。仅供内部测试使用，请勿外传！", "QikuTestTools测试版提醒", MessageBoxButtons.OK, MessageBoxIcon.Warning)
             End If
         Else
             MessageBox.Show("当前无法从服务器上获取更新或公告信息，可能是没有网络连接或者服务器出现异常。", "QikuTestTools无法连接到服务器", MessageBoxButtons.OK, MessageBoxIcon.Error)
         End If
     End Sub
     Private Sub About_Click(sender As Object, e As EventArgs) Handles About.Click
+
         frmAbout.Show()
     End Sub
     Private Sub Duty_Click(sender As Object, e As EventArgs) Handles Duty.Click
@@ -61,72 +52,82 @@
         If Button1.Text.Substring(Button1.Text.Length - 4) = "（禁用）" Then
             MessageBox.Show("QikuTestTools在检测手机连接时发现OS或安卓版本不符合要求，一些功能将受限制无法使用。", "QikuTestTools限制了一些功能", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            Form2.Timer1.Enabled = True
-            Form2.ShowDialog()
+            frmExecute.Timer1.Enabled = True
+            frmExecute.ShowDialog()
         End If
     End Sub
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         If Button2.Text.Substring(Button2.Text.Length - 4) = "（禁用）" Then
             MessageBox.Show("QikuTestTools在检测手机连接时发现OS或安卓版本不符合要求，一些功能将受限制无法使用。", "QikuTestTools限制了一些功能", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            Form2.Timer2.Enabled = True
-            Form2.ShowDialog()
+            frmExecute.Timer2.Enabled = True
+            frmExecute.ShowDialog()
         End If
     End Sub
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         If Button3.Text.Substring(Button3.Text.Length - 4) = "（禁用）" Then
             MessageBox.Show("QikuTestTools在检测手机连接时发现OS或安卓版本不符合要求，一些功能将受限制无法使用。", "QikuTestTools限制了一些功能", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            Form2.Timer3.Enabled = True
-            Form2.ShowDialog()
+            frmExecute.Timer3.Enabled = True
+            frmExecute.ShowDialog()
         End If
     End Sub
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-        Form2.Timer4.Enabled = True
-        Form2.ShowDialog()
+        frmExecute.Timer4.Enabled = True
+        frmExecute.ShowDialog()
     End Sub
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
-        Form2.Timer5.Enabled = True
-        Form2.ShowDialog()
+        frmExecute.Timer5.Enabled = True
+        frmExecute.ShowDialog()
     End Sub
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
-        Form2.Timer6.Enabled = True
-        Form2.ShowDialog()
+        frmExecute.Timer6.Enabled = True
+        frmExecute.ShowDialog()
     End Sub
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        Form2.Timer7.Enabled = True
-        Form2.ShowDialog()
+        frmExecute.Timer7.Enabled = True
+        frmExecute.ShowDialog()
     End Sub
     Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
         If Button8.Text.Substring(Button8.Text.Length - 4) = "（禁用）" Then
             MessageBox.Show("QikuTestTools在检测手机连接时发现OS或安卓版本不符合要求，一些功能将受限制无法使用。", "QikuTestTools限制了一些功能", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            Form2.Timer8.Enabled = True
-            Form2.ShowDialog()
+            frmExecute.Timer8.Enabled = True
+            frmExecute.ShowDialog()
         End If
     End Sub
     Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Form2.Timer9.Enabled = True
-        Form2.ShowDialog()
+        frmExecute.Timer9.Enabled = True
+        frmExecute.ShowDialog()
     End Sub
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
         If Button10.Text.Substring(Button10.Text.Length - 4) = "（禁用）" Then
             MessageBox.Show("QikuTestTools在检测手机连接时发现OS或安卓版本不符合要求，一些功能将受限制无法使用。", "QikuTestTools限制了一些功能", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            Form2.Timer10.Enabled = True
-            Form2.ShowDialog()
+            frmExecute.Timer10.Enabled = True
+            frmExecute.ShowDialog()
         End If
     End Sub
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         If Button10.Text.Substring(Button11.Text.Length - 4) = "（禁用）" Then
             MessageBox.Show("QikuTestTools在检测手机连接时发现OS或安卓版本不符合要求，一些功能将受限制无法使用。", "QikuTestTools限制了一些功能", MessageBoxButtons.OK, MessageBoxIcon.Warning)
         Else
-            Form2.Timer11.Enabled = True
-            Form2.ShowDialog()
+            frmExecute.Timer11.Enabled = True
+            frmExecute.ShowDialog()
         End If
     End Sub
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
-        Form2.Timer12.Enabled = True
-        Form2.ShowDialog()
+        frmExecute.Timer12.Enabled = True
+        frmExecute.ShowDialog()
+    End Sub
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+        frmSpread.Show()
+    End Sub
+    Public Sub Delay(ByVal interval As Integer)  '延迟
+        Dim time As DateTime = DateTime.Now
+        Dim span As Int64 = interval * 10000
+        Do While (DateTime.Now.Ticks - time.Ticks < span)
+            Application.DoEvents()
+        Loop
     End Sub
 End Class
